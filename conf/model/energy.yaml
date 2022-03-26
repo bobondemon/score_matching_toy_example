@@ -1,0 +1,9 @@
+_target_:  scorematchingproj.model.energy.Energy
+net:
+  _target_: scorematchingproj.model.energy.ToyMLP
+  input_dim: 2
+  output_dim: 1
+  units: [300, 300]
+  swish: true
+  dropout: false
+

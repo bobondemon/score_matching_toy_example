@@ -1,0 +1,25 @@
+defaults:
+  - /model@model: energy
+  - /dataloader@dataloader: data_config
+
+toy_set_type: '2spirals' # should be one of ("2spirals", "8gaussians", "checkerboard", "rings")
+
+# train_flow config
+trainer_init_kwargs:
+  loss_type: 'ssm_vr'  # loss type, should be one of ('dsm', 'deen', 'ssm', and 'ssm_vr')
+  loss_init_kwargs:
+    # sigma: 0.1  # for dsm/deen. controls the noise level
+    n_slices: 1 # for ssm/ssm_vr. controls the number of projection vectors
+  vis_dir: "./vis_dir"
+  langevin_steps: 100 # controls the step number in langevin sampling
+  langevin_eps: 0.01
+  learning_rate: 1e-3 # optimizer learning rate
+  clipnorm: 100.0
+  device: "cuda"
+  tb_logdir: "./tblog"
+
+trainer_learn_kwargs:
+  n_steps: 50000
+  batch_size: 100
+  log_freq: 2500
+  vis_freq: 5000

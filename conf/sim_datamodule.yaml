@@ -1,0 +1,6 @@
+defaults:
+  - /dataloader@dataloader: data_config
+
+plot_kwargs:
+  a: 10
+  b: 11

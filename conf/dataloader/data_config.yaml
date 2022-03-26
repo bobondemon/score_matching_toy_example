@@ -1,0 +1,7 @@
+_target_: scorematchingproj.dataloader.toy_dataset_and_loader.ToyDataLoader
+dataset:
+  _target_: scorematchingproj.dataloader.toy_dataset_and_loader.ToyIterDataset
+  set_type: '${toy_set_type}'
+  n_samples: 1000000
+batch_size: 100
+num_workers: 0
