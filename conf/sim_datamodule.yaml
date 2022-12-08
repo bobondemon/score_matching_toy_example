@@ -1,6 +1,11 @@
 defaults:
   - /dataloader@dataloader: data_config
 
+toy_set_type: '2spirals' # should be one of ("2spirals", "8gaussians", "checkerboard", "rings")
 plot_kwargs:
   a: 10
   b: 11
+
+hydra:
+  run:
+    dir: ./outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}

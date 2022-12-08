@@ -22,4 +22,9 @@ trainer_learn_kwargs:
   n_steps: 50000
   batch_size: 100
   log_freq: 2500
-  vis_freq: 5000
+  vis_freq: 25000
+
+
+hydra:
+  run:
+    dir: ./outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
